@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import 'animate.css';
 
 export default function CardComponent(){
     const [data, setData] = useState([]);
@@ -8,7 +9,7 @@ export default function CardComponent(){
         axios
         .get('https://api.adviceslip.com/advice')
         .then((res) => {
-            setData(res.data)
+            setData(res.data);
         })
         .catch((err) => console.log(err));
     }
@@ -19,12 +20,12 @@ export default function CardComponent(){
 
     return (
         <div className="card">
-            <div className='container'>
+            <div className='container animate__animated animate__swing'>
                {Object.values(data).map(item => (
-                <div key={item.id}>
+                   <div key={item.id}>
                     <p>Advice #{item.id}</p>
                     <h1>“{item.advice}”</h1>
-                </div>
+                </div> 
                ))}
             </div>
             <img src="/images/pattern-divider-mobile.svg" alt="" className='mobile-pattern' />

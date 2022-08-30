@@ -26,6 +26,7 @@
   max-width: 540px;
   background: hsl(217, 19%, 24%);
   border-radius: 15px;
+  box-shadow: 1px 2px 5px #000;
 }
 .container {
   width: 90%;
@@ -72,6 +73,9 @@
   .container p {
     font-size: 12px;
     margin: 35px 0;
+  }
+  .container h1 {
+    padding-bottom: 40px;
   }
   .mobile-pattern {
     display: none;
